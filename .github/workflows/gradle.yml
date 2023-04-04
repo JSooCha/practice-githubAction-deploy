@@ -10,8 +10,6 @@ name: Java CI with Gradle
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -61,5 +59,4 @@ jobs:
         --deployment-config-name CodeDeployDefault.AllAtOnce
         --deployment-group-name be-99-jsoocha-group
         --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=practice-deploy.zip
-        
-        
+         
